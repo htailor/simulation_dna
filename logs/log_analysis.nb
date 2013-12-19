@@ -1,0 +1,149 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      5708,        140]
+NotebookOptionsPosition[      5150,        119]
+NotebookOutlinePosition[      5683,        139]
+CellTagsIndexPosition[      5640,        136]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", 
+  RowBox[{"FileNameJoin", "[", 
+   RowBox[{"{", 
+    RowBox[{"NotebookDirectory", "[", "]"}], "}"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.541500436623601*^9, 3.541500439532605*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"tMatrix", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{"\"\<t_Matrix.log\>\"", ",", "\"\<Table\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"teval", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{"\"\<t_eval.log\>\"", ",", "\"\<Table\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"tevec", "=", 
+    RowBox[{"Import", "[", 
+     RowBox[{"\"\<t_evec.log\>\"", ",", "\"\<Table\>\""}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"MatrixForm", "[", "tMatrix", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"MatrixForm", "[", "teval", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"MatrixForm", "[", "tevec", "]"}]}], "Input",
+ CellChangeTimes->{{3.463996362033678*^9, 3.463996406499353*^9}, {
+   3.463996504801661*^9, 3.463996508192556*^9}, {3.463997062192006*^9, 
+   3.4639970990063763`*^9}, {3.4639971409044228`*^9, 3.463997144221273*^9}, {
+   3.4639972107500467`*^9, 3.463997212154912*^9}, 3.463997724078753*^9, {
+   3.463998539474036*^9, 3.463998546783083*^9}, {3.464001398156489*^9, 
+   3.464001455205532*^9}, {3.4640015694333572`*^9, 3.4640015790498943`*^9}, {
+   3.4655637146098022`*^9, 3.465563719340333*^9}, {3.465563780663788*^9, 
+   3.4655638492352753`*^9}, {3.466406235953105*^9, 3.4664062942620573`*^9}, {
+   3.4674578199628077`*^9, 3.4674578275456753`*^9}, {3.468926333759721*^9, 
+   3.468926336190522*^9}, {3.469793639408428*^9, 3.469793639419297*^9}, {
+   3.473933847115*^9, 3.473933872729*^9}, {3.473934689888*^9, 
+   3.4739346999849997`*^9}, {3.47470270210264*^9, 3.47470272411952*^9}, {
+   3.474705877513886*^9, 3.474705948022113*^9}, 3.4747059996591663`*^9, {
+   3.474876748919447*^9, 3.47487679179749*^9}, {3.474878123347978*^9, 
+   3.474878129618417*^9}, 3.4751454487911997`*^9, {3.4753125437946*^9, 
+   3.4753125469926*^9}, 3.4753247548566*^9, {3.4753248545406*^9, 
+   3.4753248823710003`*^9}, {3.4753249192338*^9, 3.4753249549578*^9}, {
+   3.4753249935834*^9, 3.4753251444198*^9}, {3.4753252495632*^9, 
+   3.4753253725067997`*^9}, {3.475826492507607*^9, 3.4758265949599524`*^9}, {
+   3.4758266537175694`*^9, 3.4758267645546*^9}, {3.4758268104757357`*^9, 
+   3.475826852280822*^9}, {3.475826975705299*^9, 3.475827066306278*^9}, {
+   3.475827144346807*^9, 3.4758271551524763`*^9}, {3.475833588156451*^9, 
+   3.475833688724052*^9}, {3.48455932870046*^9, 3.484559380390321*^9}, {
+   3.484567316422411*^9, 3.4845673261293163`*^9}, {3.541337047521068*^9, 
+   3.541337050776664*^9}, {3.541500098616723*^9, 3.541500099606855*^9}, {
+   3.541500192501423*^9, 3.5415003416329927`*^9}, {3.541500371639256*^9, 
+   3.5415004512282*^9}, {3.54150358940556*^9, 3.5415035908362923`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"t00Matrix", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{"\"\<t00_Matrix.log\>\"", ",", "\"\<Table\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"t00eval", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{"\"\<t00_eval.log\>\"", ",", "\"\<Table\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"t00evec", "=", 
+    RowBox[{"Import", "[", 
+     RowBox[{"\"\<t00_evec.log\>\"", ",", "\"\<Table\>\""}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"MatrixForm", "[", "t00Matrix", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"MatrixForm", "[", "t00eval", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"MatrixForm", "[", "t00evec", "]"}]}], "Input",
+ CellChangeTimes->{{3.5415004809771223`*^9, 3.5415005109838037`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"t11Matrix", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{"\"\<t11_Matrix.log\>\"", ",", "\"\<Table\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"t11eval", "=", 
+   RowBox[{"Import", "[", 
+    RowBox[{"\"\<t11_eval.log\>\"", ",", "\"\<Table\>\""}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"t11evec", "=", 
+    RowBox[{"Import", "[", 
+     RowBox[{"\"\<t11_evec.log\>\"", ",", "\"\<Table\>\""}], "]"}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"MatrixForm", "[", "t11Matrix", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"MatrixForm", "[", "t11eval", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"MatrixForm", "[", "t11evec", "]"}]}], "Input",
+ CellChangeTimes->{{3.541500515807165*^9, 3.541500529046721*^9}}]
+},
+WindowSize->{874, 947},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+PrintingPageRange->{Automatic, Automatic},
+PrintingOptions->{"Magnification"->1.,
+"PaperOrientation"->"Portrait",
+"PaperSize"->{594.3000000000001, 840.51},
+"PostScriptOutputFile"->"Untitled-1.ps"},
+FrontEndVersion->"7.0 for Linux x86 (64-bit) (February 25, 2009)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 235, 5, 32, "Input"],
+Cell[783, 27, 2707, 46, 165, "Input"],
+Cell[3493, 75, 827, 20, 165, "Input"],
+Cell[4323, 97, 823, 20, 165, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
