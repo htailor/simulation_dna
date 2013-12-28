@@ -6,15 +6,15 @@ Partition function calculations for DNA using the Transfer Matrix Method.
 Requirements
 ============
 
-*Linux OS
-*Mathematica (for the data analysis)
+* Linux OS
+* Mathematica (for the data analysis)
 
 Compiling Requirements
 ======================
 
-*GCC 4.7
-*OpenMP
-*GSL Scientific Library
+* GCC 4.7
+* OpenMP
+* GSL Scientific Library
 
 Compiling
 =========
