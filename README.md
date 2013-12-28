@@ -6,18 +6,15 @@ Partition function calculations for DNA using the Transfer Matrix Method.
 Requirements
 ============
 
-Linux OS
-
-Mathematica (for the data analysis)
+*Linux OS
+*Mathematica (for the data analysis)
 
 Compiling Requirements
 ======================
 
-GCC 4.7
-
-OpenMP
-
-GSL Scientific Library
+*GCC 4.7
+*OpenMP
+*GSL Scientific Library
 
 Compiling
 =========
@@ -43,7 +40,9 @@ The table highlights the parameters needed to run the calculations
 
 There are two methods to run the calculations. In the first method running the binary file as
 
-`$ ./Nucleation`
+```
+$ ./Nucleation
+```
 
 will initiate a user menu system asking for the parameters needed for the calculations. The second method passes the parameters from the command line 
 
