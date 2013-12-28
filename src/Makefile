@@ -1,9 +1,10 @@
 all: Nucleation
 
-INCLUDE=/usr/include/gsl
+#INCLUDE=/usr/include/gsl
 LIBS=-lgsl -lgslcblas -lm
 
-COMPILE=g++ -fopenmp -c -g -I$(INCLUDE)
+#COMPILE=g++ -fopenmp -c -g -I$(INCLUDE)
+COMPILE=g++ -fopenmp -c -g 
 LINK=g++ -fopenmp
 
 all: Nucleation
