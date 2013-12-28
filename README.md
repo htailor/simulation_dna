@@ -7,13 +7,16 @@ Requirements
 ============
 
 Linux OS
+
 Mathematica (for the data analysis)
 
 Compiling Requirements
 ======================
 
 GCC 4.7
+
 OpenMP
+
 GSL Scientific Library
 
 Compiling
@@ -44,6 +47,8 @@ There are two methods to run the calculations. In the first method running the b
 
 will initiate a user menu system asking for the parameters needed for the calculations. The second method passes the parameters from the command line 
 
-`$ ./Nucleation --L <INT> --m <INT> --N <INT> --eta_b <DOUBLE> --kappa <DOUBLE> --sigma <DOUBLE> --umin <INT> --umax <INT>`
+```
+$ ./Nucleation --L <INT> --m <INT> --N <INT> --eta_b <DOUBLE> --kappa <DOUBLE> --sigma <DOUBLE> --umin <INT> --umax <INT>
+```
 
 Results from the simulations are written in the `./results` directory into sub-directories for each state (Intact, Frayed and Bubble). After the results are generated run the mathematica books in the directory to perform the analysis.
