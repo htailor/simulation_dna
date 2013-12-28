@@ -32,7 +32,7 @@ The table highlights the parameters needed to run the calculations
 | m         | --m      |           &lt;int&gt;          | Sets the delta                                         |
 | N         | --N      |           &lt;int&gt;          | Sets the number of base-pairs in the structure         |
 | eta_b     | --eta_b  |         &lt;double&gt;         | Sets the elastic range in the potential                |
-| kappa     | --kappa  |         &lt;double&gt;         | Sets the spring constant of the backbone               |
+| kappa     | --kappa  |         &lt;double&gt;         | Sets the spring constant of the backbones               |
 | sigma     | --sigma  |         &lt;double&gt;         | Sets the spring constant of the base-pairs             |
 | umin      | --umin   |           &lt;int&gt;          | Starting position of the extension (number of delta's) |
 | umax      | --umax   |           &lt;int&gt;          | End position of the extension (number of delta's)      |
