@@ -19,7 +19,7 @@ Compiling Requirements
 Compiling
 =========
 
-Run the script `COMPILE.sh` to compile. This will create a new binary file called `Nucleation` with the older version being renamed to `Nucleation.bak`. The source code and makefile are located in the ./src directory. 
+Run the script `COMPILE.sh` to compile. This will create a new binary file called `Nucleation` with the older file being renamed to `Nucleation.bak` (If a binary file already exists). The source code and makefile are located in the ./src directory. 
 
 Instructions
 ============
@@ -44,7 +44,7 @@ There are two methods to run the calculations. The first method involves running
 $ ./Nucleation
 ```
 
-This will initiate a user interface asking for parameters needed for the calculations. The second method bypasses the user interface and allows the passing of parameters from the command line 
+This will initiate a user interface asking for parameters needed for the calculations. The second method bypasses the user interface and allows the passing of parameters from execution 
 
 ```
 $ ./Nucleation --L <INT> --m <INT> --N <INT> --eta_b <DOUBLE> --kappa <DOUBLE> --sigma <DOUBLE> --umin <INT> --umax <INT>
