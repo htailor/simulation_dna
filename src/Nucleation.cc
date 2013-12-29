@@ -73,18 +73,25 @@ vector<vector<complex<double> > > s1_xi_s2;
 
 void NucleationRun(int intact, int broken){
 
+	/*
+		Calculates the partition function for a nucleated state specified by the number of intact and broken base-pairs.
+	*/
+
+	// Create files for free energy and partition function
 	string FE_filename  = "FreeEnergy_" + intToString(intact) + "_" + intToString(broken) + ".out";
 	string PF_filename  = "PartitionFunction_" + intToString(intact) + "_" + intToString(broken) + ".out";
 
 	Matrix FE = Matrix(umax-umin+1,2);
 	Matrix PF = Matrix(umax-umin+1,2);
-
+	
+	// Create files for the force (first derivative of the free energy and partition function)
 	string dFE_filename = "dFreeEnergy_" + intToString(intact) + "_" + intToString(broken) + ".out";
 	string dPF_filename = "dPartitionFunction_" + intToString(intact) + "_" + intToString(broken) + ".out";
   
 	Matrix dFE = Matrix(umax-umin+1,2);
 	Matrix dPF = Matrix(umax-umin+1,2);
 
+	// Create files for the mean axial displacements
 	string ZNJ_xi_filename = "znj_xi.out";
 	string ZNJ_eta_filename = "znj_eta.out";
 
@@ -126,6 +133,7 @@ void NucleationRun(int intact, int broken){
 		dFE.set(i-umin,1,dFreeEnergy);
 		dFE.set(i-umin,0,Delta*i);
 
+		// Print the data to files
     	PF.print_to_file(PF_filename.c_str());
     	dPF.print_to_file(dPF_filename.c_str());
 
@@ -189,6 +197,7 @@ void NucleationRun(int intact, int broken){
 
 }
 
+// Methods for double frayed states from the ends of the DNA structure
 void NucleationDoubleFrayed(int broken1, int broken2){
 
 	string df_status_create = "touch RUNNING_DOUBLE_FRAYED_" + intToString(broken1) + "_" + intToString(broken2) + ".status";
@@ -253,7 +262,7 @@ int main(int argc,char *argv[])
    system("touch SIM_STARTED.status");
    system("touch RUNNING.status");
 
-   time_t NUCLEATION_START,NUCLEATION_FINISH;
+   time_t NUCLEATION_START,NUCLEATION_FINISH;	// Start timer to calculate total runtime
    time (&NUCLEATION_START);
    printf("*******************************************************************************************\n");
    printf("Starting Nucleation Simulation.....\n");
@@ -348,6 +357,8 @@ int main(int argc,char *argv[])
    ///STAGE 3 - CALCULATE DOUBLE INTEGRALS FOR T10 and T01 Matrices///
 
 ///////////////////////////////////////////////////////////////////////////////////////
+
+   // Calculates all the integral sums for the partition function calculations
 
    sVt00 = vector<vector<complex<double> > > (2*smax+1, vector<complex<double> > (tmax) );
    CsVt00 = vector<vector<complex<double> > > (2*smax+1, vector<complex<double> > (tmax) );

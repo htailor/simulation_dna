@@ -6,6 +6,9 @@ extern double eta_b;
 
 using namespace std;
 
+/*
+	gfactor functions to set by eta_b
+*/
 double g0(double eta)
 {
    double _g0;
@@ -29,6 +32,13 @@ double g1(double eta)
    }
    return _g1;
 }
+
+/*
+	Following are the transfer matrix equations used for the backbone
+	and base-pairs. The 1's indicate broken base-pairs and the 0's indicate 
+	intact base-pairs. These are set by the gfactor functions above.
+
+*/
 
 double T(double ea, double eb)
 {

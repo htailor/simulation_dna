@@ -6,12 +6,19 @@
 
 using namespace std;
 
+/*
+	Functions to calculate the Eigenvalues and Eigenfunctions using GSL libraries
+*/
+
+// Eigenvector function
 Matrix Eigenvectors(Matrix M){
 
-    int _k = M.n_row();
+	// Method destroys the initial Matrix and therefore a copy must be made
+    int _k = M.n_row(); // size of the matrix
 
-    gsl_matrix *_M = gsl_matrix_alloc(_k,_k);
+    gsl_matrix *_M = gsl_matrix_alloc(_k,_k); // Allocate memory
 
+	// Set values in the new matrix
     for(int i=0;i<_k;i++){
        for (int j=0;j<_k;j++){
          gsl_matrix_set(_M,i,j,M.get(i,j));
@@ -21,10 +28,10 @@ Matrix Eigenvectors(Matrix M){
     gsl_matrix *EVEC = gsl_matrix_alloc(_k,_k);
     gsl_vector *DUMMY = gsl_vector_alloc(_k);
 
-    gsl_eigen_symmv_workspace *TEMP_EVEC = gsl_eigen_symmv_alloc(_k);
+    gsl_eigen_symmv_workspace *TEMP_EVEC = gsl_eigen_symmv_alloc(_k); // Create workspace for the algo
     gsl_eigen_symmv(_M,DUMMY,EVEC,TEMP_EVEC);
 
-    gsl_eigen_symmv_sort(DUMMY,EVEC,GSL_EIGEN_SORT_ABS_DESC);
+    gsl_eigen_symmv_sort(DUMMY,EVEC,GSL_EIGEN_SORT_ABS_DESC); // Sort eigenvectors 
     gsl_eigen_symmv_free(TEMP_EVEC);
 
     gsl_matrix_transpose(EVEC);
@@ -40,12 +47,15 @@ Matrix Eigenvectors(Matrix M){
     return eigenvectors;
 }
 
+// Eigenvalue function
 Vector Eigenvalues(Matrix M){
 
+	// Method destroys the initial Matrix and therefore a copy must be made
     int _k = M.n_row();
 
     gsl_matrix *_M = gsl_matrix_alloc(_k,_k);
 
+	// Set values in the new matrix
     for(int i=0;i<_k;i++){
        for (int j=0;j<_k;j++){
          gsl_matrix_set(_M,i,j,M.get(i,j));

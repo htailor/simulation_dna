@@ -1,5 +1,9 @@
 #include "Matrix.hh"
 
+/* 
+	Matrix container for gsl_matrix. Normal methods include getters and setters,
+	as well as methods to print the output to a file.
+*/
 
 using namespace std;
 
@@ -40,7 +44,7 @@ void Matrix::print_row(const char* filename, int ROW){
    fclose(row_file);
 }
 
-
+// Creates a file that contains the matrix (COLUMN first)
 void Matrix::print_to_file(const char* filename){
     
     FILE * matrix_file = fopen(filename,"w");
@@ -54,6 +58,7 @@ void Matrix::print_to_file(const char* filename){
     fclose(matrix_file);
 }
 
+// Creates a file that contains the matrix (ROW first)
 void Matrix::print_to_file_list(const char* filename){
     
     FILE * matrix_file = fopen(filename,"w");
@@ -66,6 +71,7 @@ void Matrix::print_to_file_list(const char* filename){
     fclose(matrix_file);
 }
 
+// Returns the original gsl_matrix object
 gsl_matrix Matrix::return_gsl_matrix(){
    return *_MATRIX;
 }

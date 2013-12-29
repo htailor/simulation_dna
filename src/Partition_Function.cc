@@ -41,6 +41,9 @@ extern vector<vector<complex<double> > > s1_xi_s2;
 extern vector<vector<double> > t_eta_t2;
 
 
+
+//	Functions for the Integral summations 
+
 complex<double> EXP_sVt00(int s, int t)
 {
 	complex<double> _EXP_sVt00 = (0,0);
@@ -59,7 +62,6 @@ complex<double> EXP_CsVt00(int s, int t)
 	return _EXP_CsVt00;
 }
 
-
 complex<double> EXP_sVt11(int s, int t)
 {
 	complex<double> _EXP_sVt11 = (0,0);
@@ -69,13 +71,16 @@ complex<double> EXP_sVt11(int s, int t)
 	return _EXP_sVt11;
 }
 
+
+//	Partition function 
+
 vector<double> Partition_Function(int nIntact,int nBroken,int Extension){
 	vector<double> _PF_DATA (2);
 	double Sum_PF = 0;
 	double Sum_DPF = 0;
 	if(nBroken==0){ // Intact Partition Function
 		#pragma omp parallel for reduction(+:Sum_PF,Sum_DPF)
-		for(int s=-smax;s<=smax;s++){
+		for(int s=-smax;s<=smax;s++){						
         	complex<double> s_complex(0.0,(-(4.*PI*s)/L));
 			for(int t=0;t<tmax;t++){
 				Sum_PF = Sum_PF + pow(lambda_s(s),(N-1))
@@ -167,6 +172,8 @@ vector<double> Partition_Function(int nIntact,int nBroken,int Extension){
 	return _PF_DATA;
 }
 
+//	first derivative of the Partition function 
+
 vector<double> pf_double_frayed(int nBroken1,int nBroken2,int Extension){
 	vector<double> _PF_DATA (2);
 	double Sum_PF = 0;
@@ -209,6 +216,8 @@ vector<double> pf_double_frayed(int nBroken1,int nBroken2,int Extension){
 	_PF_DATA[1] = Sum_DPF;
 	return _PF_DATA;
 }
+
+// Mean axial displacement functions
 
 double ZNJ_ETA(int Extension,int nj){ // This calculates the exact ZNJ. The calculates include an addition nested loop over t'.
 	double Sum_ZNJ_ETA = 0;

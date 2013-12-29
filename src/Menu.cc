@@ -43,8 +43,13 @@ extern Vector t11_eval;
 extern Matrix DoubleIntegral_T10;
 extern Matrix DoubleIntegral_T01;
 
+
 void Menu(int argc, char *argv[])
 {
+	/*
+	Command Line user interface for the calculations
+	*/
+
     char s;
     int long_opt_index = 0;
     int longval;
@@ -152,6 +157,7 @@ void Menu(int argc, char *argv[])
 
    FILE * Simulation_Parameters = fopen("Parameters","w");
 
+   // save parameter values to a file
     fprintf(Simulation_Parameters,"L:\t%-5.2f\nm:\t%-3i\nN:\t%-3i\nkappa:\t%-8.6f\nsigma:\t%-8.6f\nkappa_sigma_r:\t%-8.6f\nDelta:\t%-5.4f\nExtension Minimum:\t%-3i\nExtension Maximum:\t%-3i\ne0:\t%-8.6f\nBeta:\t%-8.6f\netab_b:\t%-3.2f",L,m,N,kappa,sigma,kappa_sigma_r,Delta,umin,umax,e0,Beta,eta_b);
    fclose(Simulation_Parameters);
 
@@ -165,6 +171,11 @@ void Menu(int argc, char *argv[])
 
 
 void OutputDataToFiles(){
+
+   /*
+		This function prints out all the Transfer Matrix Data, including eigenvectors and eigenvalues.
+		
+   */
 
    printf("Creating Output Files.....");
 

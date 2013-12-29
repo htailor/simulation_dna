@@ -1,6 +1,8 @@
 #include "Vector.hh"
 #include <cmath>
 
+// Vector class to wrap around gsl_vector object
+
 using namespace std;
 
 Vector::Vector(){}

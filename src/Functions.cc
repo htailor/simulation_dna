@@ -6,6 +6,8 @@ extern double TOLERANCE;
 
 using namespace std;
 
+// Chop functions returns 0 if the arg is below a certain tolerance 
+
 double chop (double x){
 
   double chopped;
@@ -23,6 +25,8 @@ double Squared (double x){
   return (x*x); 
 
 }
+
+// Hermite function for eigenfunctions
 
 double Hermite(const int& n, const double& x)
 {
@@ -68,6 +72,8 @@ int Factorial(int n){
   }
   return answer;
 }
+
+// Converts the partition function to free energy in dimensionless form
 
 double Free_Energy(double x){
 

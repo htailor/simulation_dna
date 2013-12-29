@@ -9,6 +9,8 @@ extern double Beta;
 extern double e0;
 extern double eta_d;
 
+// Potential for DNA
+
 double Potential(double _n){
     
   double PotentialValue = -((Beta*e0)/pow(1 + 2.*(Squared(_n)/Squared(eta_d)),3.));

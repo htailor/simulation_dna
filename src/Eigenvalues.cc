@@ -6,6 +6,8 @@
 
 extern double L;
 
+// Analytical expression for the eigenvalues of the backbone
+
 double lambda_s(int s)
 {
    return pow(PI,0.5)*exp(-pow((PI*s)/L,2.));
